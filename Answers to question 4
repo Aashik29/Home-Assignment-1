@@ -1,0 +1,38 @@
+Here are concise answers to your questions on analyzing **training and validation accuracy/loss** using **TensorBoard**:
+
+---
+
+### 1. **What patterns do you observe in the training and validation accuracy curves?**
+
+* **Early Epochs**: Both training and validation accuracy rise steadily.
+* **Later Epochs**:
+
+  * Training accuracy often continues improving.
+  * Validation accuracy may **plateau** or **decline**, indicating possible **overfitting**.
+* Loss curves typically mirror accuracy: training loss drops steadily; validation loss may bottom out and then rise.
+
+---
+
+### 2. **How can you use TensorBoard to detect overfitting?**
+
+Use TensorBoard to identify overfitting by observing:
+
+* **Divergence** between training and validation accuracy curves — training improves while validation stagnates or worsens.
+* **Validation loss increases** after reaching a minimum, even as training loss decreases.
+
+These signs suggest the model is memorizing training data rather than generalizing well.
+
+---
+
+### 3. **What happens when you increase the number of epochs?**
+
+* **Initially**: More epochs help the model learn better representations, improving accuracy.
+* **Eventually**:
+
+  * Training accuracy keeps rising.
+  * Validation accuracy may **decline** due to overfitting.
+  * Model becomes less generalizable.
+
+➡️ **Solution**: Use techniques like **early stopping**, **dropout**, or **regularization** to prevent overfitting.
+
+Let me know if you want a visual example or code for early stopping!
